@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>最安経路検索</title>
+    <meta name="description" content="最も遅れ、最も安い">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>最安経路検索</h1>
+    </header>
+
+    <main>
+        <form name="locationData">
+            <div>
+                <label>
+                    出発地点
+                    <input name="departurePoint" type="text">
+                </label>
+            </div>
+            <div>
+                <label>
+                    到着地点
+                    <input name="arrivalPoint" type="text">
+                </label>
+            </div>
+            <div>
+                <button type="button" onclick="searchTransfer()">検索</button>
+            </div>
+        </form>
+        <output></output>
+    </main>
+
+    <footer>
+        <p>
+            <small>&copy;2021 淵野アタリ</small>
+        </p>
+    </footer>
+</body>
+</html>
