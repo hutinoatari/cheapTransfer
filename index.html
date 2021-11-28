@@ -13,23 +13,25 @@
     </header>
 
     <main>
+        <div>
+            <button type="button" onclick="addRelayPoint()">中間地点追加</button>
+        </div>
         <form name="locationData">
             <div>
                 <label>
-                    出発地点
-                    <input name="departurePoint" type="text">
+                    出発地点<input>
                 </label>
             </div>
+            <div id="relayPoints"></div>
             <div>
                 <label>
-                    到着地点
-                    <input name="arrivalPoint" type="text">
+                    到着地点<input>
                 </label>
             </div>
-            <div>
-                <button type="button" onclick="searchTransfer()">検索</button>
-            </div>
         </form>
+        <div>
+            <button type="button" onclick="searchTransfer()">検索</button>
+        </div>
         <output></output>
     </main>
 
