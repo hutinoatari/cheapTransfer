@@ -1,6 +1,11 @@
 const searchTransfer = () => {
     const points = document.forms.locationData.elements;
-    const text = Array.from(points).map((point) => `[${point.value}]`).join("\n| (徒歩)\n");
+    const pointArray = Array.from(points).map((point) => point.value.trim());
+    if(pointArray[0] === "" || pointArray[pointArray.length-1] === ""){
+        alert("不正な入力です。")
+        return;
+    }
+    const text = pointArray.filter(point => point !== "") .join("\n| (徒歩)\n");
     const output = document.querySelector("output");
     const button = document.querySelectorAll("button")[1];
     output.innerText = "検索中...";
