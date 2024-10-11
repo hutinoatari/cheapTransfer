@@ -1,5 +1,5 @@
 const isJapanPoint = name => {
-    const regJapaneseplace = /[ぁ-ん亜-熙]/;
+    const regJapaneseplace = /[\p{sc=Hiragana}\p{sc=Han}]/u;
     return regJapaneseplace.test(name);
 }
 
