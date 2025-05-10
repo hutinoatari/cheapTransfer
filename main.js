@@ -20,12 +20,16 @@ const searchTransfer = () => {
     }
     const output = document.querySelector("output");
     const button = document.querySelector("button");
-    output.innerText = "検索中...";
+    output.innerText = "検索中";
     button.disabled = true;
     const necessaryTime = 2000 + Math.random() * 3000;
+    const timerID = setInterval(() => {
+        output.innerText += ".";
+    }, 700);
     setTimeout(() => {
         output.innerText = `${text}\n\n合計金額0円`;
         button.disabled = false;
         button.textContent = "再検索";
+        clearInterval(timerID);
     }, necessaryTime);
 }
